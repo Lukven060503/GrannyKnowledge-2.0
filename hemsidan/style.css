@@ -1,0 +1,204 @@
+body { /*Allmänt hur sidan är uppbyggd, färg, gränser, */
+    background-color: pink;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+.hidden { /*Funktioner som kräver att man gömmer undan saker, som contents*/
+    display: none;
+}
+
+  #blackBar { /*Färg för svart reklam*/
+    background-color: black;
+    color: white;
+  }
+
+  #whiteBar { /*Färg för vit bar*/
+    background-color: white;
+    color: black;
+  }
+
+  .logo-container { /*Loggans rutas storlek*/
+    display: flex;
+    align-items: center;
+    border: 0px solid black;
+    padding: 8px;
+    width: 125px;
+    height: 125px;
+  }
+
+  .logo-container img { /*Loggans storlek innuti rutan*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .home-button { /*Home knapparnas utseende och storlek och position*/
+    border: 0px solid black;
+    padding: 45px;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  .home-button a { /*Font, färg,*/
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+  }
+  
+  .home-button:hover { /*När man håller musen över knapparna blir de gråa*/
+    background-color: #b9b9b9;
+  }
+  
+  #content1 { /*Bilden på startsidan eller home sidan, overflow för att den inte ska gå utanför rutan*/
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #content1 img { /*Bildens storlek*/
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  #content1 .centered-text { /*Textens stolek innuti bilden, färg och font*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Caveat', cursive;
+  }
+
+  #content1 .centered-text h1 { /*EN till text*/
+    font-size: 5vw;
+    margin-bottom: 10px;
+  }
+
+  #content1 .centered-text p { /*Ännu en till text*/
+    font-size: 3vw;
+  }
+  .welcome-box { /*Top rutan i info sidan, färg och rundade kanter*/
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .center { /*För de texter som ska vara i mitten av sin div/block/container*/
+    text-align: center;
+  }
+
+  .welcome-box h2 { /*Färg*/
+    color: #333;
+  }
+
+  .welcome-box p { /*Ljusare färg*/
+    color: #555;
+  }
+  .grid-container { /*Positionerna av inforutorna och mellanrum mellan dem*/
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .grid-column { /*Det finns två kolumner, en till vänster och en till höger, dessa är även varannan info varannan bild*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  .grid-item { /*Bilderna i infosidans storlek, inte går ut utanför rutan*/
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .white-bg { /*För de divs/block som har en vit bakgrund*/
+    background-color: #fff;
+  }
+  .about-contact-info { /*Rutans storlek, färg, skugga, rundade kanter*/
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-contact-info h2 { /*Färg för h2 i "about us" rutan*/
+    color: #333;
+  }
+
+  .about-contact-info ul { /*Punktform*/
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .about-contact-info li { /*Så att de inte står innuti varandra*/
+    margin-bottom: 10px;
+  }
+  .centered-square { /*Länkar till sociala medier, men denna är bara rutan, */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .centered-square p { /*Hur texten ska se ut*/
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .social-icons { /*Ger ikonernas position*/
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icon { /*Deras storlek och mellanrum, färg*/
+    font-size: 24px;
+    margin: 0 30px;
+    color: #333;
+    text-decoration: none;
+  }
+  .white-box { /*Produkternas behållare*/
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+    padding-bottom: 1rem;
+    margin: 3rem;
+    overflow: auto;
+  }
+  .product-img { /*Bildernas storlek*/
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #content3 .grid-item { /*Info sidans avstånd mellan alla rutor*/
+    padding: 10px;
+  }
+  .grid-item { /*Bilderna i info sidan*/
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .product-overflow { /*Ifall namnen i shoppen blir för stora, eller om man byter device och namnen inte längre får plats, kan man skrolla för att se hela namnen*/
+    overflow-x:scroll;
+  }
